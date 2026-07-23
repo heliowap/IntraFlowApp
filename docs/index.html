@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Intra Flow — The cursor receives the voice</title>
+  <meta name="description" content="Native macOS voice dictation. Speak in pt-BR — ordered language lands at the cursor. BYOK. Download the beta DMG." />
+
+  <!-- Open Graph (WhatsApp / Facebook / Telegram) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Intra Flow" />
+  <meta property="og:title" content="Intra Flow 0.1.2 (beta)" />
+  <meta property="og:description" content="The cursor receives the voice. Native macOS dictation · Dev Mode · BYOK." />
+  <meta property="og:url" content="https://heliowap.github.io/IntraFlowApp/" />
+  <meta property="og:image" content="https://heliowap.github.io/IntraFlowApp/brand/og-release-v0.1.2.png" />
+  <meta property="og:image:secure_url" content="https://heliowap.github.io/IntraFlowApp/brand/og-release-v0.1.2.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Intra Flow — The cursor receives the voice" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Intra Flow 0.1.2 (beta)" />
+  <meta name="twitter:description" content="The cursor receives the voice. Native macOS dictation · Dev Mode · BYOK." />
+  <meta name="twitter:image" content="https://heliowap.github.io/IntraFlowApp/brand/og-release-v0.1.2.png" />
+
+  <link rel="icon" href="brand/icon-color-256.png" type="image/png" />
+
+  <style>
+    :root {
+      --graphite: #12141a;
+      --paper: #f4f1ea;
+      --muted: #c9c4d8;
+      --dim: #8a8699;
+      --signal: #6e5ef0;
+      --signal-hot: #a899ff;
+      --sans: "Avenir Next", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --mono: "SF Mono", ui-monospace, Menlo, monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      font-family: var(--sans);
+      color: var(--paper);
+      background:
+        radial-gradient(80% 70% at 70% -10%, color-mix(in oklab, var(--signal) 20%, transparent), transparent 55%),
+        linear-gradient(180deg, #1f2230, var(--graphite));
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      width: min(920px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 48px 0 72px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid color-mix(in oklab, var(--signal-hot) 55%, transparent);
+      background: color-mix(in oklab, var(--signal) 12%, transparent);
+      color: var(--signal-hot);
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .pill .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--signal-hot);
+      box-shadow: 0 0 10px var(--signal-hot);
+    }
+    h1 {
+      font-size: clamp(40px, 7vw, 64px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .lede {
+      font-size: clamp(18px, 2.6vw, 24px);
+      color: var(--muted);
+      max-width: 28ch;
+      margin-bottom: 28px;
+    }
+    .hero {
+      display: block;
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid color-mix(in oklab, var(--paper) 10%, transparent);
+      margin: 0 0 28px;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    a.btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    a.btn-primary {
+      background: var(--signal);
+      color: white;
+    }
+    a.btn-primary:hover { background: #7f70f5; }
+    a.btn-ghost {
+      background: color-mix(in oklab, var(--paper) 6%, transparent);
+      color: var(--paper);
+      border: 1px solid color-mix(in oklab, var(--paper) 14%, transparent);
+    }
+    a.btn-ghost:hover {
+      border-color: color-mix(in oklab, var(--signal-hot) 50%, transparent);
+    }
+    .note {
+      color: var(--dim);
+      font-size: 14px;
+      line-height: 1.55;
+      max-width: 62ch;
+    }
+    .note a { color: var(--signal-hot); }
+    code {
+      font-family: var(--mono);
+      font-size: 0.92em;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="pill"><span class="dot" aria-hidden="true"></span> v0.1.2 beta</div>
+    <h1>Intra Flow</h1>
+    <p class="lede">The cursor receives the voice.</p>
+
+    <img
+      class="hero"
+      src="brand/og-release-v0.1.2.png"
+      width="1200"
+      height="630"
+      alt="Intra Flow — The cursor receives the voice"
+    />
+
+    <div class="actions">
+      <a class="btn btn-primary" href="https://github.com/heliowap/IntraFlowApp/releases/download/v0.1.2/IntraFlow-0.1.2.dmg">
+        Download DMG 0.1.2
+      </a>
+      <a class="btn btn-ghost" href="https://github.com/heliowap/IntraFlowApp/blob/main/INSTALL.md">
+        Install guide
+      </a>
+      <a class="btn btn-ghost" href="https://github.com/heliowap/IntraFlowApp/releases/tag/v0.1.2">
+        Release notes
+      </a>
+    </div>
+
+    <p class="note">
+      Native macOS menu-bar dictation · Dev Mode · BYOK (sua chave OpenAI).<br />
+      Beta assinado com Apple Development — <strong>não</strong> notarizado.
+      No Sequoia: <code>Ajustes → Privacidade e Segurança → Abrir mesmo assim</code>.<br /><br />
+      Link para WhatsApp / redes (OG desta página):
+      <a href="https://heliowap.github.io/IntraFlowApp/"><code>https://heliowap.github.io/IntraFlowApp/</code></a>
+    </p>
+  </main>
+</body>
+</html>
