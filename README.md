@@ -130,4 +130,6 @@ Feedback and bugs: [GitHub Issues](https://github.com/heliowap/IntraFlowApp/issu
 
 ## License / source
 
-This repo distributes the **compiled app** and marketing docs. Source and engineering notes live elsewhere.
+**Proprietary — All Rights Reserved.** See [LICENSE](LICENSE).
+
+This repo distributes the **compiled app** and marketing docs for personal evaluation. Source and engineering notes are not published here. Copyright is automatic; no registration is required for this reservation.
