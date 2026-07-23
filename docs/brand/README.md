@@ -8,3 +8,5 @@
 | `icon-color.svg` | App mark vector |
 
 Story and rules: [BRAND_STORY.md](../BRAND_STORY.md) · [BRAND.md](../BRAND.md) · [DESIGN.md](../DESIGN.md).
+| `intra-flow-demo-15s.gif` | 15s product demo (pt → EN at cursor), Instagram DM |
+

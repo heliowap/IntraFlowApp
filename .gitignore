@@ -3,3 +3,4 @@ dist/
 *.dmg
 *.app
 .dd-release/
+.venv-gif/
