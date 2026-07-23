@@ -1,54 +1,59 @@
 # Intra Flow — Install (beta)
 
-## 1. Install
+## Antes de começar
 
-1. Download `IntraFlow-*.dmg` from [Releases](https://github.com/heliowap/IntraFlowApp/releases/latest).
-2. Open the DMG.
-3. Drag **IntraFlow.app** into **Applications** (shortcut on the DMG).
+Este build é assinado com **Apple Development** (conta gratuita), **não** com Developer ID + notarização.
 
-## 2. First open (Gatekeeper)
+- Em muitos Macs o caminho abaixo basta (Gatekeeper → Abrir mesmo assim).
+- Em outros, um build Development **não abre** se a máquina não estiver no perfil de provisionamento — aí não é só o aviso do Gatekeeper. Nesse caso o caminho certo é um build **notarizado** (conta Apple Developer paga), não `xattr` no Terminal.
 
-This beta is **not notarized**. On first open, macOS may say the app can’t be verified. That’s expected.
+Não use comando de Terminal para “forçar” a abertura num convite a criadores: se precisar disso, adie o contato até ter Developer ID + notarização.
 
-Do **one** of these once:
+## 1. Instalar
 
-**A — Finder**
+1. Baixe `IntraFlow-*.dmg` em [Releases](https://github.com/heliowap/IntraFlowApp/releases/latest).
+2. Abra o DMG.
+3. Arraste **IntraFlow.app** para **Applications**.
 
-1. In Applications, **right-click** IntraFlow.app → **Open** → **Open**.
+## 2. Primeira abertura (macOS Sequoia / 15+)
 
-**B — Terminal**
+O beta **não é notarizado**. Na primeira abertura o macOS pode bloquear.
 
-```bash
-xattr -dr com.apple.quarantine /Applications/IntraFlow.app
-```
+Caminho atual (Sequoia):
 
-Then open the app normally.
+1. Tente abrir IntraFlow.app (duplo-clique) — o sistema pode recusar.
+2. Abra **Ajustes do Sistema → Privacidade e Segurança**.
+3. Role até a mensagem sobre IntraFlow ter sido bloqueado.
+4. Clique em **Abrir mesmo assim** (pode pedir senha / Touch ID).
+5. Confirme **Abrir** se o diálogo aparecer de novo.
 
-## 3. Permissions
+Em versões mais antigas do macOS, às vezes ainda funciona **botão direito → Abrir** no Finder; no Sequoia o caminho confiável é **Privacidade e Segurança**.
 
-**System Settings → Privacy & Security**
+## 3. Permissões
 
-| Permission | Why |
+**Ajustes do Sistema → Privacidade e Segurança**
+
+| Permissão | Para quê |
 | --- | --- |
-| **Accessibility** | Global Trigger + insert text at the cursor |
-| **Microphone** | Capture your voice |
+| **Acessibilidade** | Trigger global + inserir texto no cursor |
+| **Microfone** | Capturar a voz |
 
-Enable Intra Flow under Accessibility. Allow the mic when prompted.
+Ligue Intra Flow em Acessibilidade. Aceite o microfone quando pedir.
 
-## 4. OpenAI API key (BYOK)
+## 4. Chave OpenAI (BYOK)
 
-On first run, paste your OpenAI API key.
+Na primeira execução, cole sua chave da API OpenAI.
 
-- Needs **Realtime** + **Chat** enabled on the org.
-- Stored only in the **Mac Keychain** — not in project files or logs.
+- Org com **Realtime** + **Chat** habilitados.
+- Guardada só na **Chaveira** do Mac.
 
-## 5. Use
+## 5. Usar
 
-1. Focus a text field.
-2. Hold **left-Option** (default Trigger) and speak.
-3. Release to inject polished text at the cursor.
+1. Foque um campo de texto.
+2. Segure **Option esquerda** (Trigger padrão) e fale.
+3. Solte para injetar o texto polido no cursor.
 
-Menu-bar wave icon → Preferences, History, Impact, Mode, Trigger.
+Ícone de onda na barra de menus → Preferências, Histórico, Impacto, Mode, Trigger.
 
 ---
 

@@ -59,7 +59,7 @@ Get the latest macOS build from **[Releases](https://github.com/heliowap/IntraFl
 
 | Asset | Notes |
 | --- | --- |
-| `IntraFlow-0.1.0.dmg` | Beta DMG (Apple Development signed; **not** notarized) |
+| `IntraFlow-*.dmg` | Beta DMG (Apple Development signed; **not** notarized) — test on a second Mac before sharing |
 
 > This repository ships the **runnable app and product docs only** — not the full engineering monorepo.
 
@@ -72,9 +72,11 @@ Full first-run checklist (Gatekeeper, permissions, API key): **[INSTALL.md](INST
 Short version:
 
 1. Open the DMG → drag **IntraFlow.app** to **Applications**.
-2. First launch: **right-click → Open** (Gatekeeper will warn once on this beta).
+2. First launch (macOS 15 Sequoia): try to open → **System Settings → Privacy & Security → Open Anyway** (not right-click → Open).
 3. Allow **Microphone** and enable **Accessibility** for Intra Flow.
 4. Paste your **OpenAI API key** when asked (Keychain only).
+
+> This beta is **not** Developer ID + notarized. If it won’t open on a clean Mac (beyond Gatekeeper), don’t send Terminal `xattr` workarounds to creators — wait for a notarized build.
 
 ---
 
@@ -122,7 +124,7 @@ Product and brand context (safe public surface):
 
 ## Beta note
 
-`0.1.0` is signed with an **Apple Development** identity (free account), not a paid Developer ID + notarization. Gatekeeper will ask you to open it once via right-click. A notarized release path is planned for later.
+Current betas are signed with **Apple Development** (free account), not paid **Developer ID + notarization**. On Sequoia, unblock via **Privacy & Security → Open Anyway**. A notarized build is the bar for cold outreach to creators.
 
 Feedback and bugs: [GitHub Issues](https://github.com/heliowap/IntraFlowApp/issues).
 
