@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1c24"/>
+      <stop offset="0.55" stop-color="#12141a"/>
+      <stop offset="1" stop-color="#0c0d12"/>
+    </linearGradient>
+    <linearGradient id="sig" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8b7cff"/>
+      <stop offset="1" stop-color="#5b4fd6"/>
+    </linearGradient>
+    <linearGradient id="bw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6e5ef0"/>
+      <stop offset="1" stop-color="#a899ff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="42%" r="48%">
+      <stop offset="0" stop-color="#6e5ef0" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#6e5ef0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- flow field -->
+  <g opacity="0.16" fill="none" stroke="#8b7cff" stroke-width="1.2">
+    <path d="M40 520 C180 440, 260 360, 380 300 S560 220, 700 180"/>
+    <path d="M60 580 C220 480, 300 400, 420 340 S620 250, 780 200"/>
+    <path d="M20 460 C160 400, 240 340, 360 290 S540 210, 680 160"/>
+  </g>
+
+  <!-- Composer × Waveform mark (left) -->
+  <g transform="translate(88,175) scale(2.6)">
+    <!-- waveform bars tapering into cursor -->
+    <rect x="8" y="38" width="5" height="24" rx="2.5" fill="url(#bw)" opacity="0.55"/>
+    <rect x="18" y="30" width="5" height="40" rx="2.5" fill="url(#bw)" opacity="0.7"/>
+    <rect x="28" y="24" width="5" height="52" rx="2.5" fill="url(#bw)" opacity="0.85"/>
+    <rect x="38" y="32" width="5" height="36" rx="2.5" fill="url(#bw)"/>
+    <rect x="48" y="40" width="5" height="20" rx="2.5" fill="url(#bw)" opacity="0.75"/>
+    <rect x="58" y="44" width="4" height="12" rx="2" fill="url(#bw)" opacity="0.45"/>
+    <!-- I-beam -->
+    <rect x="72" y="22" width="5.5" height="56" rx="1.6" fill="url(#sig)"/>
+    <rect x="66" y="22" width="17.5" height="4" rx="1.6" fill="url(#sig)"/>
+    <rect x="66" y="74" width="17.5" height="4" rx="1.6" fill="url(#sig)"/>
+  </g>
+
+  <!-- version pill -->
+  <rect x="460" y="168" width="168" height="40" rx="20" fill="#6e5ef0" fill-opacity="0.18" stroke="#8b7cff" stroke-width="1.5"/>
+  <text x="544" y="195" text-anchor="middle" fill="#a899ff" font-family="SF Mono, Menlo, monospace" font-size="18" font-weight="600" letter-spacing="0.12em">v0.1.2 BETA</text>
+
+  <text x="460" y="280" fill="#f4f1ea" font-family="Avenir Next, SF Pro Display, Helvetica Neue, sans-serif" font-size="76" font-weight="600" letter-spacing="-1.5">Intra Flow</text>
+  <text x="460" y="348" fill="#c9c4d8" font-family="Avenir Next, SF Pro Text, Helvetica Neue, sans-serif" font-size="30" font-weight="400">Conversational follow-ups · Dev Mode</text>
+  <text x="460" y="402" fill="#8b7cff" font-family="Avenir Next, SF Pro Text, Helvetica Neue, sans-serif" font-size="22" font-weight="500" letter-spacing="0.03em">TERMINAL + AI TOOL · NO MORE OUT-OF-CONTEXT COMMANDS</text>
+  <text x="460" y="470" fill="#8a8699" font-family="SF Mono, Menlo, monospace" font-size="18" letter-spacing="0.06em">pt-BR speech ’ ordered language at the cursor</text>
+</svg>
